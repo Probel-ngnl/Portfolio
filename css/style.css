@@ -462,11 +462,10 @@ header {
 }
 .tech-item {
     border-bottom: 1px solid rgba(243,242,240,0.3);
-    padding-top: calc(50% - 108px);
+    display: grid;
+    align-items: center;
+    justify-content: center;
     border-right: 1px solid rgba(243,242,240,0.3);
-}
-#php {
-    padding-top: 46px;
 }
 .html, .css, .js, .jq {
     border-top: 1px solid rgba(243,242,240,0.3);
