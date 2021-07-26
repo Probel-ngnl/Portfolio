@@ -27,6 +27,9 @@ body {
 .dark .gradient {
     background: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0) 100%);
 }
+.dark .advantages-image path {
+    fill: #F3F2F0;
+}
 .light {
     background-color: #F3F2F0;
     color: #010101;
@@ -51,6 +54,9 @@ body {
 }
 .light .gradient {
     background: linear-gradient(180deg, #E7E6E6 0%, rgba(231, 230, 230, 0) 100%);
+}
+.light .advantages-image path {
+    fill: #010101;
 }
 .wrapper {
     max-width: 1140px;
@@ -453,9 +459,6 @@ header {
 .advantages-image svg {
     width: 40px;
     height: 40px;
-}
-.advantages-image path {
-    fill: #F3F2F0;
 }
 .advantages .title-h3 {
     margin-top: 0;
