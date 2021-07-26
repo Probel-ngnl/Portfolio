@@ -15,10 +15,20 @@ body {
 .dark .nav-link {
     color: #F3F2F0;
 }
+.dark .project:hover {
+    border-bottom: 2px solid #F3F2F0;
+}
+.dark .project-img {
+    background-image: url(../img/arrow.svg);
+}
 .dark .social,
 .dark .steps-item,
 .dark .about-title,
-.dark .about-description {
+.dark .about-description,
+.dark .work,
+.dark .tarif-title,
+.dark .tarif-description,
+.dark .tarif-item {
     border-bottom: 1px solid #F3F2F0;
 }
 .dark .steps-item:first-child {
@@ -29,6 +39,36 @@ body {
 }
 .dark .advantages-image path {
     fill: #F3F2F0;
+}
+.dark .nav-tabs-item.ui-state-active .nav-tabs-link {
+    color: #F3F2F0;
+    border-bottom: 1px solid #F3F2F0;
+}
+.dark .advantages,
+.dark .form-item {
+    border-top: 1px solid #F3F2F0;
+}
+.dark footer {
+    border-top: 1px solid #F3F2F0;
+}
+.dark .footer-link:hover {
+    color: #F3F2F0;
+    border-bottom: 1px solid #F3F2F0;
+}
+.dark form input {
+    background-color: #38383A;
+    color: #F3F2F0;
+}
+.dark .ui-selectmenu-button.ui-button {
+    background-color: #38383A;
+    color: #FFF;
+}
+.dark .ui-selectmenu-menu .ui-menu {
+    background-color: #38383A;
+    color: rgba(243,242,240,0.4);
+}
+.dark .ui-selectmenu-menu .ui-menu .ui-menu-item:hover {
+    color: rgba(243,242,240,1);
 }
 .light {
     background-color: #F3F2F0;
@@ -43,20 +83,60 @@ body {
 .light .nav-link {
     color: #010101;
 }
+.light .project:hover {
+    border-bottom: 2px solid #010101;
+}
+.light .project-img {
+    background-image: url(../img/arrows.svg);
+}
 .light .social,
 .light .steps-item,
 .light .about-title,
-.light .about-description {
+.light .about-description,
+.light .work,
+.light .tarif-title,
+.light .tarif-description,
+.light .tarif-item {
     border-bottom: 1px solid #010101;
 }
 .light .steps-item:first-child {
     border-top: 1px solid #010101;
 }
 .light .gradient {
-    background: linear-gradient(180deg, #E7E6E6 0%, rgba(231, 230, 230, 0) 100%);
+    background: linear-gradient(180deg, #E7E6E6 0%, #F3F2F0 100%);
 }
 .light .advantages-image path {
     fill: #010101;
+}
+.light .nav-tabs-item.ui-state-active .nav-tabs-link {
+    color: #010101;
+    border-bottom: 1px solid #010101;
+}
+.light .advantages,
+.light .form-item {
+    border-top: 1px solid #010101;
+}
+.light footer {
+    border-top: 1px solid #010101;
+}
+.light .footer-link:hover {
+    color: #010101;
+    border-bottom: 1px solid #010101;
+}
+.light form input {
+    background-color: #E7E6E6;
+    color: #010101;
+}
+.light .ui-selectmenu-button.ui-button {
+    background-color: #E7E6E6;
+    color: #010101;
+}
+.light .ui-selectmenu-menu .ui-menu {
+    background-color: #808080;
+    color: rgba(243,242,240,0.4);
+}
+.light .ui-selectmenu-menu .ui-menu .ui-menu-item:hover {
+    color: #010101;
 }
 .wrapper {
     max-width: 1140px;
@@ -129,7 +209,7 @@ header {
     display: block;
     width: 1px;
     height: 24px;
-    background-color: rgba(243,242,240,0.5);
+    background-color: #A9A9A9;
     position: absolute;
     left: 0;
     top: calc(50% - 12px);
@@ -145,7 +225,7 @@ header {
     display: block;
     width: 1px;
     height: 24px;
-    background-color: rgba(243,242,240,0.5);
+    background-color: #A9A9A9;
     position: absolute;
     left: 0;
     top: calc(50% - 12px);
@@ -179,7 +259,7 @@ header {
     font-size: 16px;
     font-weight: 700;
     padding-bottom: 11px;
-    transition: 0.2s border-bottom ease;
+    transition: 0.2s ease;
     border-bottom: 2px solid transparent;
 }
 .project:hover {
@@ -189,7 +269,6 @@ header {
     width: 16px;
     height: 12px;
     display: block;
-    background-image: url(../img/arrow.svg);
     margin-left: 15px;
 }
 .skill {
@@ -349,6 +428,7 @@ header {
 }
 #tabs {
     position: relative;
+    border-top: 1px solid #A9A9A9;
 }
 .portfolio {
     margin-bottom: 145px;
@@ -372,12 +452,8 @@ header {
 .nav-tabs-link {
     border-bottom: 1px solid transparent;
     padding-bottom: 21px;
-    color: rgba(243,242,240,0.5);
+    color: #808080;
     text-decoration: none;
-}
-.nav-tabs-item.ui-state-active .nav-tabs-link {
-    color: #F3F2F0;
-    border-bottom: 1px solid #F3F2F0;
 }
 .nav-tabs-link:focus {
     outline: none;
@@ -386,7 +462,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #F3F2F0;
     padding-top: 61px;
     padding-bottom: 58px;
 }
@@ -445,7 +520,6 @@ header {
     display: grid;
     grid-template: 1fr 1fr / repeat(3, 1fr);
     grid-gap: 81px 22px;
-    border-top: 1px solid #F3F2F0;
     padding-top: 81px;
     margin-top: 79px;
 }
@@ -477,14 +551,14 @@ header {
     text-align: center;
 }
 .tech-item {
-    border-bottom: 1px solid rgba(243,242,240,0.3);
+    border-bottom: 1px solid #696969;
     display: grid;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid rgba(243,242,240,0.3);
+    border-right: 1px solid #696969;
 }
 .html, .css, .js, .jq {
-    border-top: 1px solid rgba(243,242,240,0.3);
+    border-top: 1px solid #696969;
 }
 .tech-image {
     filter: grayscale(100%);
@@ -495,7 +569,7 @@ header {
 }
 .tech-item:first-child,
 .tech-item:nth-child(5) {
-    border-left: 1px solid rgba(243,242,240,0.3);
+    border-left: 1px solid #696969;
 }
 .ui-tooltip {
     background-color: #E31B1B;
@@ -546,7 +620,6 @@ header {
     font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    border-bottom: 1px solid #F3F2F0;
     padding-top: 5px;
 }
 .tarif-title > div {
@@ -561,7 +634,6 @@ header {
     font-weight: 400;
     line-height: 150%;
     opacity: 0.8;
-    border-bottom: 1px solid #F3F2F0;
     padding-bottom: 52px;
 }
 .tarif-name {
@@ -654,7 +726,6 @@ form {
 }
 .form-item {
     padding-top: 58px;
-    border-top: 1px solid #F3F2F0;
 }
 .form-social {
     display: flex;
@@ -673,11 +744,9 @@ form label {
 form input {
     width: 100%;
     padding: 26px 20px 26px;
-    background-color: #38383A;
     border: none;
     box-sizing: border-box;
     margin-bottom: 21px;
-    color: #F3F2F0;
 }
 form input[type=submit] {
     background: #D40000;
@@ -696,8 +765,6 @@ form select {
 }
 .ui-selectmenu-button.ui-button {
     width: 100%;
-    background-color: #38383A;
-    color: #FFF;
     padding: 25px 20px 25px;
     box-sizing: border-box;
     margin-bottom: 39px;
@@ -715,11 +782,7 @@ form select {
 .ui-selectmenu-menu .ui-menu .ui-menu-item {
     padding: 10px 20px;
 }
-.ui-selectmenu-menu .ui-menu .ui-menu-item:hover {
-    color: rgba(243,242,240,1);
-}
 footer {
-    border-top: 1px solid #F3F2F0;
     margin-top: 29px;
 }
 .footer-top {
@@ -735,17 +798,14 @@ footer {
 }
 .footer-bottom p {
     margin: 0;
-    color: rgba(243,242,240,0.3);
+    color: #696969;
     font-size: 12px;
     line-height: 150%;
+    opacity: 0.3;
 }
 .footer-link {
-    color: rgba(243,242,240,0.3);
-    border-bottom: 1px solid rgba(243,242,240,0.3);
+    color: #696969;
+    border-bottom: 1px solid #696969;
     transition: 0.2s ease;
     text-decoration: none;
-}
-.footer-link:hover {
-    color: rgba(243,242,240,1);
-    border-bottom: 1px solid rgba(243,242,240,1);
 }
